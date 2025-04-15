@@ -1,0 +1,23 @@
+Subject: Azure Migration from On-Premises: Authentication and App ID Issues
+
+Dear [Recipient's Name],
+
+I hope this message finds you well. I wanted to bring to your attention a couple of challenges we've encountered during our Azure migration process from on-premises, along with their respective resolutions:
+
+Issue: Azure Service Principle Instead of NHID
+
+Challenge: We attempted to use NHID for Kubernetes application authentication, only to find that it is designed for on-prem API authentication and cannot be promoted as an Azure Service Principle. This posed a configuration hurdle.
+
+Resolution: We have submitted an Azure authentication request to create the Service Principle in Azure, which should address this issue moving forward.
+
+Issue: HCV App ID for Apache Airflow
+
+Challenge: Due to security considerations with protected schemas, the App ID required for clients to mint tokens before accessing secrets from HCV could not be enabled.
+
+Resolution: To resolve this, we have created a non-protected schema that inherently enables the App ID, ensuring the necessary functionality without compromising security measures.
+
+These steps aim to streamline our Azure migration and ensure seamless integration of our applications. Please feel free to reach out if further clarification or action is needed regarding these matters.
+
+Thank you for your attention to these issues.
+
+Best regards,
